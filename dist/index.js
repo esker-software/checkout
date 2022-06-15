@@ -1917,7 +1917,11 @@ exports.parseURL = __webpack_require__(936).parseURL;
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -3574,7 +3578,11 @@ conversions["RegExp"] = function (V, opts) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -4123,7 +4131,11 @@ function checkMode (stat, options) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -4157,7 +4169,7 @@ const inputHelper = __importStar(__webpack_require__(821));
 const path = __importStar(__webpack_require__(622));
 const stateHelper = __importStar(__webpack_require__(153));
 function run() {
-    var _a, _b;
+    var _a;
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const sourceSettings = yield inputHelper.getInputs();
@@ -4173,18 +4185,18 @@ function run() {
             }
         }
         catch (error) {
-            core.setFailed(`${(_b = (_a = error) === null || _a === void 0 ? void 0 : _a.message) !== null && _b !== void 0 ? _b : error}`);
+            core.setFailed(`${(_a = error === null || error === void 0 ? void 0 : error.message) !== null && _a !== void 0 ? _a : error}`);
         }
     });
 }
 function cleanup() {
-    var _a, _b;
+    var _a;
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield gitSourceProvider.cleanup(stateHelper.RepositoryPath);
         }
         catch (error) {
-            core.warning(`${(_b = (_a = error) === null || _a === void 0 ? void 0 : _a.message) !== null && _b !== void 0 ? _b : error}`);
+            core.warning(`${(_a = error === null || error === void 0 ? void 0 : error.message) !== null && _a !== void 0 ? _a : error}`);
         }
     });
 }
@@ -4251,7 +4263,11 @@ module.exports = {"name":"@octokit/rest","version":"16.43.1","publishConfig":{"a
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -4432,7 +4448,7 @@ function testRef(git, ref, commit) {
 }
 exports.testRef = testRef;
 function checkCommitInfo(token, commitInfo, repositoryOwner, repositoryName, ref, commit) {
-    var _a, _b;
+    var _a;
     return __awaiter(this, void 0, void 0, function* () {
         try {
             // GHES?
@@ -4488,7 +4504,7 @@ function checkCommitInfo(token, commitInfo, repositoryOwner, repositoryName, ref
             }
         }
         catch (err) {
-            core.debug(`Error when validating commit info: ${(_b = (_a = err) === null || _a === void 0 ? void 0 : _a.stack) !== null && _b !== void 0 ? _b : err}`);
+            core.debug(`Error when validating commit info: ${(_a = err === null || err === void 0 ? void 0 : err.stack) !== null && _a !== void 0 ? _a : err}`);
         }
     });
 }
@@ -6503,7 +6519,11 @@ function coerce (version) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -6584,7 +6604,7 @@ class GitAuthHelper {
         });
     }
     configureTempGlobalConfig() {
-        var _a, _b;
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             // Already setup global config
             if (((_a = this.temporaryHomePath) === null || _a === void 0 ? void 0 : _a.length) > 0) {
@@ -6605,7 +6625,7 @@ class GitAuthHelper {
                 configExists = true;
             }
             catch (err) {
-                if (((_b = err) === null || _b === void 0 ? void 0 : _b.code) !== 'ENOENT') {
+                if ((err === null || err === void 0 ? void 0 : err.code) !== 'ENOENT') {
                     throw err;
                 }
             }
@@ -6690,7 +6710,6 @@ class GitAuthHelper {
         });
     }
     configureSsh() {
-        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             if (!this.settings.sshKey) {
                 return;
@@ -6716,7 +6735,7 @@ class GitAuthHelper {
                 userKnownHosts = (yield fs.promises.readFile(userKnownHostsPath)).toString();
             }
             catch (err) {
-                if (((_a = err) === null || _a === void 0 ? void 0 : _a.code) !== 'ENOENT') {
+                if ((err === null || err === void 0 ? void 0 : err.code) !== 'ENOENT') {
                     throw err;
                 }
             }
@@ -6777,7 +6796,7 @@ class GitAuthHelper {
         });
     }
     removeSsh() {
-        var _a, _b;
+        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             // SSH key
             const keyPath = this.sshKeyPath || stateHelper.SshKeyPath;
@@ -6786,7 +6805,7 @@ class GitAuthHelper {
                     yield io.rmRF(keyPath);
                 }
                 catch (err) {
-                    core.debug(`${(_b = (_a = err) === null || _a === void 0 ? void 0 : _a.message) !== null && _b !== void 0 ? _b : err}`);
+                    core.debug(`${(_a = err === null || err === void 0 ? void 0 : err.message) !== null && _a !== void 0 ? _a : err}`);
                     core.warning(`Failed to remove SSH key '${keyPath}'`);
                 }
             }
@@ -6796,7 +6815,7 @@ class GitAuthHelper {
                 try {
                     yield io.rmRF(knownHostsPath);
                 }
-                catch (_c) {
+                catch (_b) {
                     // Intentionally empty
                 }
             }
@@ -6835,7 +6854,11 @@ class GitAuthHelper {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -7293,7 +7316,11 @@ class GitOutput {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -8884,7 +8911,11 @@ function escapeProperty(s) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -8919,7 +8950,7 @@ const fsHelper = __importStar(__webpack_require__(618));
 const io = __importStar(__webpack_require__(1));
 const path = __importStar(__webpack_require__(622));
 function prepareExistingDirectory(git, repositoryPath, repositoryUrl, clean, ref) {
-    var _a, _b;
+    var _a;
     return __awaiter(this, void 0, void 0, function* () {
         assert.ok(repositoryPath, 'Expected repositoryPath to be defined');
         assert.ok(repositoryUrl, 'Expected repositoryUrl to be defined');
@@ -8945,7 +8976,7 @@ function prepareExistingDirectory(git, repositoryPath, repositoryUrl, clean, ref
                     yield io.rmRF(lockPath);
                 }
                 catch (error) {
-                    core.debug(`Unable to delete '${lockPath}'. ${(_b = (_a = error) === null || _a === void 0 ? void 0 : _a.message) !== null && _b !== void 0 ? _b : error}`);
+                    core.debug(`Unable to delete '${lockPath}'. ${(_a = error === null || error === void 0 ? void 0 : error.message) !== null && _a !== void 0 ? _a : error}`);
                 }
             }
             try {
@@ -10932,7 +10963,11 @@ exports.RequestError = RequestError;
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -11030,7 +11065,6 @@ exports.downloadRepository = downloadRepository;
 function getDefaultBranch(authToken, owner, repo) {
     return __awaiter(this, void 0, void 0, function* () {
         return yield retryHelper.execute(() => __awaiter(this, void 0, void 0, function* () {
-            var _a;
             core.info('Retrieving the default branch name');
             const octokit = new github.GitHub(authToken);
             let result;
@@ -11042,7 +11076,7 @@ function getDefaultBranch(authToken, owner, repo) {
             }
             catch (err) {
                 // Handle .wiki repo
-                if (((_a = err) === null || _a === void 0 ? void 0 : _a.status) === 404 &&
+                if ((err === null || err === void 0 ? void 0 : err.status) === 404 &&
                     repo.toUpperCase().endsWith('.WIKI')) {
                     result = 'master';
                 }
@@ -13336,7 +13370,11 @@ module.exports = {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -13378,7 +13416,6 @@ class RetryHelper {
         }
     }
     execute(action) {
-        var _a;
         return __awaiter(this, void 0, void 0, function* () {
             let attempt = 1;
             while (attempt < this.maxAttempts) {
@@ -13387,7 +13424,7 @@ class RetryHelper {
                     return yield action();
                 }
                 catch (err) {
-                    core.info((_a = err) === null || _a === void 0 ? void 0 : _a.message);
+                    core.info(err === null || err === void 0 ? void 0 : err.message);
                 }
                 // Sleep
                 const seconds = this.getSleepAmount();
@@ -13442,7 +13479,11 @@ module.exports = require("events");
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -13463,7 +13504,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.fileExistsSync = exports.existsSync = exports.directoryExistsSync = void 0;
 const fs = __importStar(__webpack_require__(747));
 function directoryExistsSync(path, required) {
-    var _a, _b, _c;
+    var _a;
     if (!path) {
         throw new Error("Arg 'path' must not be empty");
     }
@@ -13472,13 +13513,13 @@ function directoryExistsSync(path, required) {
         stats = fs.statSync(path);
     }
     catch (error) {
-        if (((_a = error) === null || _a === void 0 ? void 0 : _a.code) === 'ENOENT') {
+        if ((error === null || error === void 0 ? void 0 : error.code) === 'ENOENT') {
             if (!required) {
                 return false;
             }
             throw new Error(`Directory '${path}' does not exist`);
         }
-        throw new Error(`Encountered an error when checking whether path '${path}' exists: ${(_c = (_b = error) === null || _b === void 0 ? void 0 : _b.message) !== null && _c !== void 0 ? _c : error}`);
+        throw new Error(`Encountered an error when checking whether path '${path}' exists: ${(_a = error === null || error === void 0 ? void 0 : error.message) !== null && _a !== void 0 ? _a : error}`);
     }
     if (stats.isDirectory()) {
         return true;
@@ -13490,7 +13531,7 @@ function directoryExistsSync(path, required) {
 }
 exports.directoryExistsSync = directoryExistsSync;
 function existsSync(path) {
-    var _a, _b, _c;
+    var _a;
     if (!path) {
         throw new Error("Arg 'path' must not be empty");
     }
@@ -13498,16 +13539,16 @@ function existsSync(path) {
         fs.statSync(path);
     }
     catch (error) {
-        if (((_a = error) === null || _a === void 0 ? void 0 : _a.code) === 'ENOENT') {
+        if ((error === null || error === void 0 ? void 0 : error.code) === 'ENOENT') {
             return false;
         }
-        throw new Error(`Encountered an error when checking whether path '${path}' exists: ${(_c = (_b = error) === null || _b === void 0 ? void 0 : _b.message) !== null && _c !== void 0 ? _c : error}`);
+        throw new Error(`Encountered an error when checking whether path '${path}' exists: ${(_a = error === null || error === void 0 ? void 0 : error.message) !== null && _a !== void 0 ? _a : error}`);
     }
     return true;
 }
 exports.existsSync = existsSync;
 function fileExistsSync(path) {
-    var _a, _b, _c;
+    var _a;
     if (!path) {
         throw new Error("Arg 'path' must not be empty");
     }
@@ -13516,10 +13557,10 @@ function fileExistsSync(path) {
         stats = fs.statSync(path);
     }
     catch (error) {
-        if (((_a = error) === null || _a === void 0 ? void 0 : _a.code) === 'ENOENT') {
+        if ((error === null || error === void 0 ? void 0 : error.code) === 'ENOENT') {
             return false;
         }
-        throw new Error(`Encountered an error when checking whether path '${path}' exists: ${(_c = (_b = error) === null || _b === void 0 ? void 0 : _b.message) !== null && _c !== void 0 ? _c : error}`);
+        throw new Error(`Encountered an error when checking whether path '${path}' exists: ${(_a = error === null || error === void 0 ? void 0 : error.message) !== null && _a !== void 0 ? _a : error}`);
     }
     if (!stats.isDirectory()) {
         return true;
@@ -13622,7 +13663,11 @@ module.exports = require("net");
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -17205,7 +17250,11 @@ function sync (path, options) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
 }) : (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -17265,7 +17314,7 @@ function getInputs() {
         result.repositoryPath = core.getInput('path') || '.';
         result.repositoryPath = path.resolve(githubWorkspacePath, result.repositoryPath);
         if (!(result.repositoryPath + path.sep).startsWith(githubWorkspacePath + path.sep)) {
-            throw new Error(`Repository path '${result.repositoryPath}' is not under '${githubWorkspacePath}'`);
+            core.info(`Repository path '${result.repositoryPath}' is not under '${githubWorkspacePath}'`);
         }
         // Workflow repository?
         const isWorkflowRepository = qualifiedRepository.toUpperCase() ===
