@@ -46,7 +46,7 @@ export async function getInputs(): Promise<IGitSourceSettings> {
       githubWorkspacePath + path.sep
     )
   ) {
-    throw new Error(
+    core.info(
       `Repository path '${result.repositoryPath}' is not under '${githubWorkspacePath}'`
     )
   }
